@@ -1,0 +1,119 @@
+/*
+ * SPDX-FileCopyrightText: 2025 Idiap Research Institute <contact@idiap.ch>
+ *
+ * SPDX-FileContributor: Delmas Maxime maxime.delmas@idiap.ch
+ * SPDX-FileContributor: Gusicuma Danilo danilo.gusicuma@idiap.ch
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* index.css */
+
+/* Background color or image */
+body {
+    background-color: #f4f4f4; /* Light gray background color */
+}
+
+/* Typography */
+.title {
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-size: 36px; /* Change font size */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Change font color */
+}
+
+/* Button */
+.button {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s; /* Add transition */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Custom checkbox */
+.checkbox-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #95b6f1;
+}
+
+.checkbox-wrapper:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-wrapper .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.panel {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+
+.checkbox-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-row {
+    display: flex;
+    flex-direction: column;
+    align-items: right; /* Align items vertically */
+}
+
+.checkbox-item {
+    margin-right: 20px; /* Adjust spacing between checkboxes */
+}
+
+.checkbox-item:last-child {
+    margin-right: 0; /* Remove right margin from the last checkbox in each row */
+}
+
+.checkbox-item label {
+    display: flex;
+    align-items: center; /* Align checkbox and text horizontally */
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Adjust spacing between checkbox and text */
+}

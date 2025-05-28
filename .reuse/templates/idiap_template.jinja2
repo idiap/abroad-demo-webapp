@@ -1,0 +1,10 @@
+{% for copyright_line in copyright_lines %}
+{{ copyright_line }}
+{% endfor %}
+
+SPDX-FileContributor: Delmas Maxime maxime.delmas@idiap.ch
+SPDX-FileContributor: Gusicuma Danilo danilo.gusicuma@idiap.ch
+
+{% for expression in spdx_expressions %}
+SPDX-License-Identifier: {{ expression }}
+{% endfor %}
